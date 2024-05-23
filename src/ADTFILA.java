@@ -52,4 +52,40 @@ public class ADTFILA {
         this.cantidadeelementos = 0;
     }
     
+    public static ADTFILA FilaVacia(){
+        
+        ADTFILA nuevaFila = new ADTFILA();
+//        crea la fila vacia
+        return nuevaFila; //retorna la fila vacia
+        
+    }
+    public boolean EsVacia(){ //metodo que verifica si es vacia la fila
+        return((this.primero == null) && (this.ultimo == null));
+        
+    }
+    
+    public Integer Frente() {
+        if (this.EsVacia()) {
+            System.out.println("No tiene ningún elemento!");
+            return null;
+        } else {
+            return this.primero.getElemento();
+//        this.primero.getSiguiente();
+
+        }
+    }
+        
+    public void MostrarFila(){
+        Nodo nodoaux = this.primero;
+        
+        if(this.EsVacia()){
+            System.out.println("No tiene ningún elemento!");}
+        else{
+               while(nodoaux != null)  {
+                    System.out.println(nodoaux.getElemento());
+                    nodoaux.getSiguiente();
+               }  
+                    }
+        }
+    
 }
